@@ -1,0 +1,12 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "Mobile",
+            "id": "0f5d6fcb-2aa8-43c5-85ad-2d62dc9aaf22",
+            "actions": [],
+            "bindings": []
+        }
+    ],
+    "controlSchemes": []
+}
