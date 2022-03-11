@@ -9,16 +9,19 @@ public class GameManager : MonoBehaviour
     public FormulaScript H;
     public FormulaScript B;
     public FormulaScript m;
-    readonly public float g = 9.8f;
+    readonly private float g = 9.8f;
+    [SerializeField]
+    private float U = 12;
+    [SerializeField]
+    private float L = 5;
 
-    public float Calculate()
+    public void Calculate()
     {
-        Debug.Log(A.result);
+        float i = U / OM.result;
+        float fA = m.result * g;
+        H.ChangeResult(fA.ToString());
+        float B = fA / i * L;
+        this.B.ChangeResult(B.ToString());
 
-        return 0;
-    }
-    private void Start()
-    {
-        Calculate();
     }
 }

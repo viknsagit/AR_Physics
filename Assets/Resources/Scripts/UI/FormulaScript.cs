@@ -11,7 +11,6 @@ public class FormulaScript : MonoBehaviour
     private int minNumber;
     [SerializeField]
     private int maxNumber;
-    [SerializeField]
     public int result;
     [SerializeField,Tooltip("Единица измерения")]
     private string unit;
@@ -21,6 +20,8 @@ public class FormulaScript : MonoBehaviour
     private Button downButton;
     [SerializeField]
     private bool showButtons = true;
+    [SerializeField]
+    private LinksScript links;
 
     private void Start()
     {
@@ -45,6 +46,7 @@ public class FormulaScript : MonoBehaviour
             result++;
             resultText.text = $"{result} {unit}";
         }
+        Calculate();
     }
     public void OnDownButtonClick()
     {
@@ -58,7 +60,19 @@ public class FormulaScript : MonoBehaviour
             result--;
             resultText.text = $"{result} {unit}";
         }
+        Calculate();
     }
+
+    public void Calculate()
+    {
+        links.gameManager.Calculate();
+    }
+    public void ChangeResult(string text)
+    {
+        resultText.text = text;
+    }
+
+
 
     
 

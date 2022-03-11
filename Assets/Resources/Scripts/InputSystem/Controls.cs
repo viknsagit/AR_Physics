@@ -26,14 +26,37 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         {
             ""name"": ""Mobile"",
             ""id"": ""0f5d6fcb-2aa8-43c5-85ad-2d62dc9aaf22"",
-            ""actions"": [],
-            ""bindings"": []
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""e87d7968-2bc8-41b5-831a-e186c917e568"",
+                    ""expectedControlType"": ""Vector3"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""93cb3cee-5e3d-47ec-b546-685320a686d5"",
+                    ""path"": ""<Gyroscope>/angularVelocity"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
 }");
         // Mobile
         m_Mobile = asset.FindActionMap("Mobile", throwIfNotFound: true);
+        m_Mobile_Move = m_Mobile.FindAction("Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -93,10 +116,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     // Mobile
     private readonly InputActionMap m_Mobile;
     private IMobileActions m_MobileActionsCallbackInterface;
+    private readonly InputAction m_Mobile_Move;
     public struct MobileActions
     {
         private @Controls m_Wrapper;
         public MobileActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Mobile_Move;
         public InputActionMap Get() { return m_Wrapper.m_Mobile; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -106,15 +131,22 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_MobileActionsCallbackInterface != null)
             {
+                @Move.started -= m_Wrapper.m_MobileActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_MobileActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_MobileActionsCallbackInterface.OnMove;
             }
             m_Wrapper.m_MobileActionsCallbackInterface = instance;
             if (instance != null)
             {
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
             }
         }
     }
     public MobileActions @Mobile => new MobileActions(this);
     public interface IMobileActions
     {
+        void OnMove(InputAction.CallbackContext context);
     }
 }
