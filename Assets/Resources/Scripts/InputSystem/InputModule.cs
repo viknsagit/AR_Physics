@@ -6,17 +6,17 @@ using UnityEngine.InputSystem;
 public class InputModule : MonoBehaviour
 {
     private Controls inputActions;
-    private Camera camera;
+    private Camera mainCamera;
     private void Start()
     {
         inputActions.Mobile.Move.performed += Move_performed;
-        camera = Camera.main;
+        mainCamera = Camera.main;
     }
 
     private void Move_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
         Vector3 moveVector = new Vector3(obj.ReadValue<Vector3>().x, obj.ReadValue<Vector3>().y, obj.ReadValue<Vector3>().z);
-        camera.transform.TransformDirection(moveVector);
+        mainCamera.transform.TransformDirection(moveVector);
     }
 
     private void Awake()
