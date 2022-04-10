@@ -22,6 +22,5 @@ public class GameManager : MonoBehaviour
         H.ChangeResult(fA.ToString());
         float B = fA / i * L;
         this.B.ChangeResult(B.ToString());
-
     }
 }
