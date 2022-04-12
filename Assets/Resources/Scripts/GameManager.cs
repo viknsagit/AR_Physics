@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private float L = 5;
     [SerializeField]
     private GameObject rightObject;
+    [SerializeField]
+    private GameObject leftObject;
     private float mTemp = 0;
     public void Calculate()
     {
@@ -28,13 +30,16 @@ public class GameManager : MonoBehaviour
         if(m.result > mTemp)
         {
             mTemp = m.result;
-            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y + 0.001f, -0.01576018f);
+            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y + 0.01f, -0.01576018f);
+            leftObject.transform.position = new Vector3(9.924839f, leftObject.transform.position.y - 0.01f, -15.49707f);
 
         }
         else if (m.result < mTemp)
         {
             mTemp = m.result;
-            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y - 0.001f, -0.01576018f);
+            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y - 0.01f, -0.01576018f);
+            leftObject.transform.position = new Vector3(9.924839f, leftObject.transform.position.y + 0.01f, -15.49707f);
+
         }
     }
 }
