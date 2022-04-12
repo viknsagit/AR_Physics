@@ -30,16 +30,15 @@ public class GameManager : MonoBehaviour
         if(m.result > mTemp)
         {
             mTemp = m.result;
-            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y + 0.01f, -0.01576018f);
-            leftObject.transform.position = new Vector3(9.924839f, leftObject.transform.position.y - 0.01f, -15.49707f);
+            rightObject.transform.position = new Vector3(rightObject.transform.position.x, rightObject.transform.position.y + 0.001f, rightObject.transform.position.z);
+            leftObject.transform.position = new Vector3(leftObject.transform.position.x, leftObject.transform.position.y - 0.001f, leftObject.transform.position.z);
 
         }
         else if (m.result < mTemp)
         {
             mTemp = m.result;
-            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y - 0.01f, -0.01576018f);
-            leftObject.transform.position = new Vector3(9.924839f, leftObject.transform.position.y + 0.01f, -15.49707f);
-
+            rightObject.transform.position = new Vector3(rightObject.transform.position.x, rightObject.transform.position.y - 0.001f, rightObject.transform.position.z);
+            leftObject.transform.position = new Vector3(leftObject.transform.position.x, leftObject.transform.position.y + 0.001f, leftObject.transform.position.z);
         }
     }
 }
