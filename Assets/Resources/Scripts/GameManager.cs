@@ -16,17 +16,25 @@ public class GameManager : MonoBehaviour
     private float L = 5;
     [SerializeField]
     private GameObject rightObject;
-
+    private float mTemp = 0;
     public void Calculate()
     {
+        
         float i = U / OM.result;
         float fA = m.result * g;
         H.ChangeResult(fA.ToString());
         float B = fA / i * L;
         this.B.ChangeResult(B.ToString());
-        Debug.Log(B.ToString());
-        rightObject.transform.position = new Vector3(6.51966f, Mathf.Clamp(-m.result/15, -1.53f, -1.136053f), -0.01576018f);
-        Debug.Log(Mathf.Clamp(-m.result/15, -1.53f, -1.136053f));
+        if(m.result > mTemp)
+        {
+            mTemp = m.result;
+            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y + 0.001f, -0.01576018f);
 
+        }
+        else if (m.result < mTemp)
+        {
+            mTemp = m.result;
+            rightObject.transform.position = new Vector3(6.51966f, rightObject.transform.position.y - 0.001f, -0.01576018f);
+        }
     }
 }
