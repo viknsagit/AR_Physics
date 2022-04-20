@@ -6268,10 +6268,16 @@ struct Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields
 	String_t* ___toggleUssClassName_71;
 	// System.String UnityEngine.UIElements.Foldout::contentUssClassName
 	String_t* ___contentUssClassName_72;
+	// System.String UnityEngine.UIElements.Foldout::inputUssClassName
+	String_t* ___inputUssClassName_73;
+	// System.String UnityEngine.UIElements.Foldout::checkmarkUssClassName
+	String_t* ___checkmarkUssClassName_74;
+	// System.String UnityEngine.UIElements.Foldout::textUssClassName
+	String_t* ___textUssClassName_75;
 	// System.String UnityEngine.UIElements.Foldout::ussFoldoutDepthClassName
-	String_t* ___ussFoldoutDepthClassName_73;
+	String_t* ___ussFoldoutDepthClassName_76;
 	// System.Int32 UnityEngine.UIElements.Foldout::ussFoldoutMaxDepth
-	int32_t ___ussFoldoutMaxDepth_74;
+	int32_t ___ussFoldoutMaxDepth_77;
 };
 
 // UnityEngine.UIElements.KeyDownEvent

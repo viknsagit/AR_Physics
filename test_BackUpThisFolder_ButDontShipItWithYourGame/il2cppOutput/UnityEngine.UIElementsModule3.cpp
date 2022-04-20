@@ -1287,7 +1287,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* EventBase_1_TypeId_mC41A002F5EA9FCCEBCA769D
 IL2CPP_EXTERN_C const RuntimeMethod* EventBase_1_TypeId_mDC713E39A3F8751D647908FD59F1E7E8C5F0F8E1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* EventBase_1_TypeId_mF974BEEC820F79BD614977D40BDC358A2925330E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Foldout_OnAttachToPanel_mD7533E9F1E302EA24E18162E66402ECB0C5AED54_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Foldout_U3C_ctorU3Eb__20_0_mDA9D66196E6DC49E484CD731D93B7A086CCABA6B_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Foldout_U3C_ctorU3Eb__23_0_mE48ABEF92CB010096326302889F341CE541A3EF3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GenericDropdownMenu_Apply_mEEAE0383C2C6F51358E6EE65C01C6DDC9420469E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GenericDropdownMenu_OnAttachToPanel_mF30CBE992FAF174F6B59CC6BF7A47C974B49861B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* GenericDropdownMenu_OnContainerGeometryChanged_mDB494E758AD380C7042750BE43BF8CDFB66D2876_RuntimeMethod_var;
@@ -4801,12 +4801,14 @@ struct RectangleParams_t0B5A63548DC33EE252AF81E242B719118C235A4B
 	int32_t ___rightSlice_15;
 	// System.Int32 UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams::bottomSlice
 	int32_t ___bottomSlice_16;
+	// System.Single UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams::sliceScale
+	float ___sliceScale_17;
 	// UnityEngine.Rect UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams::spriteGeomRect
-	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___spriteGeomRect_17;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___spriteGeomRect_18;
 	// UnityEngine.UIElements.ColorPage UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams::colorPage
-	ColorPage_t7C2B8995DE8D27CED5E55F7BFE4E6C70C971FAE0 ___colorPage_18;
+	ColorPage_t7C2B8995DE8D27CED5E55F7BFE4E6C70C971FAE0 ___colorPage_19;
 	// UnityEngine.UIElements.MeshGenerationContext/MeshFlags UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams::meshFlags
-	int32_t ___meshFlags_19;
+	int32_t ___meshFlags_20;
 };
 // Native definition for P/Invoke marshalling of UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
 struct RectangleParams_t0B5A63548DC33EE252AF81E242B719118C235A4B_marshaled_pinvoke
@@ -4828,9 +4830,10 @@ struct RectangleParams_t0B5A63548DC33EE252AF81E242B719118C235A4B_marshaled_pinvo
 	int32_t ___topSlice_14;
 	int32_t ___rightSlice_15;
 	int32_t ___bottomSlice_16;
-	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___spriteGeomRect_17;
-	ColorPage_t7C2B8995DE8D27CED5E55F7BFE4E6C70C971FAE0_marshaled_pinvoke ___colorPage_18;
-	int32_t ___meshFlags_19;
+	float ___sliceScale_17;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___spriteGeomRect_18;
+	ColorPage_t7C2B8995DE8D27CED5E55F7BFE4E6C70C971FAE0_marshaled_pinvoke ___colorPage_19;
+	int32_t ___meshFlags_20;
 };
 // Native definition for COM marshalling of UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
 struct RectangleParams_t0B5A63548DC33EE252AF81E242B719118C235A4B_marshaled_com
@@ -4852,9 +4855,10 @@ struct RectangleParams_t0B5A63548DC33EE252AF81E242B719118C235A4B_marshaled_com
 	int32_t ___topSlice_14;
 	int32_t ___rightSlice_15;
 	int32_t ___bottomSlice_16;
-	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___spriteGeomRect_17;
-	ColorPage_t7C2B8995DE8D27CED5E55F7BFE4E6C70C971FAE0_marshaled_com ___colorPage_18;
-	int32_t ___meshFlags_19;
+	float ___sliceScale_17;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___spriteGeomRect_18;
+	ColorPage_t7C2B8995DE8D27CED5E55F7BFE4E6C70C971FAE0_marshaled_com ___colorPage_19;
+	int32_t ___meshFlags_20;
 };
 
 // UnityEngine.UIElements.TextElement/UxmlTraits
@@ -6451,10 +6455,16 @@ struct Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields
 	String_t* ___toggleUssClassName_71;
 	// System.String UnityEngine.UIElements.Foldout::contentUssClassName
 	String_t* ___contentUssClassName_72;
+	// System.String UnityEngine.UIElements.Foldout::inputUssClassName
+	String_t* ___inputUssClassName_73;
+	// System.String UnityEngine.UIElements.Foldout::checkmarkUssClassName
+	String_t* ___checkmarkUssClassName_74;
+	// System.String UnityEngine.UIElements.Foldout::textUssClassName
+	String_t* ___textUssClassName_75;
 	// System.String UnityEngine.UIElements.Foldout::ussFoldoutDepthClassName
-	String_t* ___ussFoldoutDepthClassName_73;
+	String_t* ___ussFoldoutDepthClassName_76;
 	// System.Int32 UnityEngine.UIElements.Foldout::ussFoldoutMaxDepth
-	int32_t ___ussFoldoutMaxDepth_74;
+	int32_t ___ussFoldoutMaxDepth_77;
 };
 
 // UnityEngine.UIElements.GroupBox
@@ -7154,6 +7164,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UxmlTraits_Init_m4C95229DA513CB516208789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* UxmlTraits_ParseChoiceList_m4A5EB36CE69E2DF851E1658FDD26D30F7FE0B323_gshared (String_t* ___choicesFromBag0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.BaseField`1/UxmlTraits<System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UxmlTraits__ctor_m81C5B10A9F9A6B1080439199B8CE1125A50A0423_gshared (UxmlTraits_tBA09AB81FDDC85AE833F75A8D561FED34D0B35A1* __this, const RuntimeMethod* method) ;
+// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1<System.Boolean>::get_visualInput()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_gshared (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26* __this, const RuntimeMethod* method) ;
 // UnityEngine.UIElements.ChangeEvent`1<T> UnityEngine.UIElements.ChangeEvent`1<System.Boolean>::GetPooled(T,T)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ChangeEvent_1_t2AA4161DCA648D276CFE726DD08B0D55FA799D4B* ChangeEvent_1_GetPooled_m1AA4D56C3754CB504862A4297FFCD577FF510E64_gshared (bool ___previousValue0, bool ___newValue1, const RuntimeMethod* method) ;
 // UnityEngine.UIElements.StyleEnum`1<T> UnityEngine.UIElements.StyleEnum`1<System.Int32Enum>::op_Implicit(T)
@@ -7268,8 +7280,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BaseField_1_get_value_m1B65678910625C38A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseField_1_set_value_m739DB8ED48770F0EC3A9C70E64B64292B5C8A9CF_gshared (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26* __this, bool ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.GroupBoxUtility::OnOptionSelected<System.Object>(T)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GroupBoxUtility_OnOptionSelected_TisRuntimeObject_m31E7884A783975A66CADCD0FCC2F22A9E49B019D_gshared (RuntimeObject* ___selectedOption0, const RuntimeMethod* method) ;
-// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1<System.Boolean>::get_visualInput()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_gshared (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26* __this, const RuntimeMethod* method) ;
 // UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1<System.Boolean>::get_labelElement()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* BaseField_1_get_labelElement_mA164849E98B4DCBCBD6BEFBE33311022B1967769_gshared_inline (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.GroupBoxUtility::RegisterGroupBoxOptionCallbacks<System.Object>(T)
@@ -7648,6 +7658,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DropdownField_ChangeValueFromMenu_m9E80499C51A7DE75F56AF0F2153B8CD2EF6882E8 (DropdownField_t22F73D2AA73274F8D5F56F30B89C5D4289E41A62* __this, String_t* ___menuItem0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.BaseBoolField::set_text(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseBoolField_set_text_mEE1205D6F5A9E94D75B77A385580C0867420A52D (BaseBoolField_t01F8AFD72D18F0EB65F949062615550A9ED30B0D* __this, String_t* ___value0, const RuntimeMethod* method) ;
+// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1<System.Boolean>::get_visualInput()
+inline VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286 (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26* __this, const RuntimeMethod* method)
+{
+	return ((  VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* (*) (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26*, const RuntimeMethod*))BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_gshared)(__this, method);
+}
+// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.UQueryExtensions::Q(UnityEngine.UIElements.VisualElement,System.String,System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* UQueryExtensions_Q_m625363964EA8275D50A9767F1E3468901C1B0BEC (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___e0, String_t* ___name1, String_t* ___className2, const RuntimeMethod* method) ;
 // UnityEngine.UIElements.ChangeEvent`1<T> UnityEngine.UIElements.ChangeEvent`1<System.Boolean>::GetPooled(T,T)
 inline ChangeEvent_1_t2AA4161DCA648D276CFE726DD08B0D55FA799D4B* ChangeEvent_1_GetPooled_m1AA4D56C3754CB504862A4297FFCD577FF510E64 (bool ___previousValue0, bool ___newValue1, const RuntimeMethod* method)
 {
@@ -8814,11 +8831,6 @@ inline void GroupBoxUtility_OnOptionSelected_TisRadioButton_t47B7368AB0B24A86540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RadioButton__ctor_mA19672A120C51D898FC14F051BE441E799150D74 (RadioButton_t47B7368AB0B24A865401F69F0AC0BFB54F3CE8C8* __this, String_t* ___label0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.BaseBoolField::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseBoolField__ctor_m03425F09EE8336FD178562D05EB43ABDFBBAF0BB (BaseBoolField_t01F8AFD72D18F0EB65F949062615550A9ED30B0D* __this, String_t* ___label0, const RuntimeMethod* method) ;
-// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1<System.Boolean>::get_visualInput()
-inline VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286 (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26* __this, const RuntimeMethod* method)
-{
-	return ((  VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* (*) (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26*, const RuntimeMethod*))BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_gshared)(__this, method);
-}
 // UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1<System.Boolean>::get_labelElement()
 inline Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* BaseField_1_get_labelElement_mA164849E98B4DCBCBD6BEFBE33311022B1967769_inline (BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26* __this, const RuntimeMethod* method)
 {
@@ -11297,44 +11309,70 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass38_0_U3CAddMenuItem
 // UnityEngine.UIElements.VisualElement UnityEngine.UIElements.Foldout::get_contentContainer()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* Foldout_get_contentContainer_m9CC7446CE3FE27BAF2FE70A06F0EB34A1C1C5511 (Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3* __this, const RuntimeMethod* method) 
 {
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* V_0 = NULL;
 	{
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = __this->___m_Container_68;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.UIElements.Foldout::set_text(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout_set_text_mE58C583C17794A001F07F396667D42C73A1828F7 (Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3* __this, String_t* ___value0, const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UQueryExtensions_t1271382882DF1B8FEEDE5EFA510405ABA7BD3426_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* G_B2_0 = NULL;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* G_B1_0 = NULL;
 	{
 		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_0 = __this->___m_Toggle_67;
 		String_t* L_1 = ___value0;
 		NullCheck(L_0);
 		BaseBoolField_set_text_mEE1205D6F5A9E94D75B77A385580C0867420A52D(L_0, L_1, NULL);
+		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_2 = __this->___m_Toggle_67;
+		NullCheck(L_2);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_3;
+		L_3 = BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286(L_2, BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_il2cpp_TypeInfo_var);
+		String_t* L_4 = ((Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_StaticFields*)il2cpp_codegen_static_fields_for(Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_il2cpp_TypeInfo_var))->___textUssClassName_99;
+		il2cpp_codegen_runtime_class_init_inline(UQueryExtensions_t1271382882DF1B8FEEDE5EFA510405ABA7BD3426_il2cpp_TypeInfo_var);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_5;
+		L_5 = UQueryExtensions_Q_m625363964EA8275D50A9767F1E3468901C1B0BEC(L_3, (String_t*)NULL, L_4, NULL);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_6 = L_5;
+		G_B1_0 = L_6;
+		if (L_6)
+		{
+			G_B2_0 = L_6;
+			goto IL_002a;
+		}
+	}
+	{
+		goto IL_0035;
+	}
+
+IL_002a:
+	{
+		il2cpp_codegen_runtime_class_init_inline(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
+		String_t* L_7 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___textUssClassName_75;
+		NullCheck(G_B2_0);
+		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(G_B2_0, L_7, NULL);
+	}
+
+IL_0035:
+	{
 		return;
 	}
 }
 // System.Boolean UnityEngine.UIElements.Foldout::get_value()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Foldout_get_value_mF0280CB9424C5E22027E0D4C3E5A35639931FADF (Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3* __this, const RuntimeMethod* method) 
 {
-	bool V_0 = false;
 	{
 		bool L_0 = __this->___m_Value_69;
-		V_0 = L_0;
-		goto IL_000a;
-	}
-
-IL_000a:
-	{
-		bool L_1 = V_0;
-		return L_1;
+		return L_0;
 	}
 }
 // System.Void UnityEngine.UIElements.Foldout::set_value(System.Boolean)
@@ -11496,14 +11534,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout__ctor_m4022437162186833982E25396
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CallbackEventHandler_RegisterCallback_TisAttachToPanelEvent_t95C0BC3DD37F324A7816CB2574B56D976C932B28_mE90FCB724E9E49659FDCAE9A1BB0FC9BA01C9BEF_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventCallback_1_t0FE3F70E94CC4C4904A9F1C171A3DE56EE41F103_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventCallback_1_t1FFCCC98AE7C52F427D11F1609ED56BE1E4AEF88_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Foldout_OnAttachToPanel_mD7533E9F1E302EA24E18162E66402ECB0C5AED54_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Foldout_U3C_ctorU3Eb__20_0_mDA9D66196E6DC49E484CD731D93B7A086CCABA6B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Foldout_U3C_ctorU3Eb__23_0_mE48ABEF92CB010096326302889F341CE541A3EF3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&INotifyValueChangedExtensions_RegisterValueChangedCallback_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m21A2CC3BF382FBC1277D210210FD318644FE566F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UQueryExtensions_t1271382882DF1B8FEEDE5EFA510405ABA7BD3426_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3FC72EB96BC4752D2217AE6BEE20806E886F8AFB);
 		s_Il2CppMethodInitialized = true;
@@ -11527,39 +11567,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout__ctor_m4022437162186833982E25396
 		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_3 = __this->___m_Toggle_67;
 		EventCallback_1_t0FE3F70E94CC4C4904A9F1C171A3DE56EE41F103* L_4 = (EventCallback_1_t0FE3F70E94CC4C4904A9F1C171A3DE56EE41F103*)il2cpp_codegen_object_new(EventCallback_1_t0FE3F70E94CC4C4904A9F1C171A3DE56EE41F103_il2cpp_TypeInfo_var);
 		NullCheck(L_4);
-		EventCallback_1__ctor_m2AECF13AF3DE354C723AC2C870875E894C4D96C9(L_4, __this, (intptr_t)((void*)Foldout_U3C_ctorU3Eb__20_0_mDA9D66196E6DC49E484CD731D93B7A086CCABA6B_RuntimeMethod_var), NULL);
+		EventCallback_1__ctor_m2AECF13AF3DE354C723AC2C870875E894C4D96C9(L_4, __this, (intptr_t)((void*)Foldout_U3C_ctorU3Eb__23_0_mE48ABEF92CB010096326302889F341CE541A3EF3_RuntimeMethod_var), NULL);
 		bool L_5;
 		L_5 = INotifyValueChangedExtensions_RegisterValueChangedCallback_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m21A2CC3BF382FBC1277D210210FD318644FE566F(L_3, L_4, INotifyValueChangedExtensions_RegisterValueChangedCallback_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m21A2CC3BF382FBC1277D210210FD318644FE566F_RuntimeMethod_var);
 		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_6 = __this->___m_Toggle_67;
 		String_t* L_7 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___toggleUssClassName_71;
 		NullCheck(L_6);
 		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_6, L_7, NULL);
-		Hierarchy_t4CF226F0EDE9C117C51C505730FC80641B1F1677 L_8;
-		L_8 = VisualElement_get_hierarchy_m2E897DE4CFD349E65CFA38EFF6BAAFECE2F4E3E4_inline(__this, NULL);
-		V_0 = L_8;
-		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_9 = __this->___m_Toggle_67;
-		Hierarchy_Add_mDDEF4932C9E9FC302755C45A9F7966AEEBC26648((&V_0), L_9, NULL);
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_10 = (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)il2cpp_codegen_object_new(VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115_il2cpp_TypeInfo_var);
-		NullCheck(L_10);
-		VisualElement__ctor_m4C59A7BA0CE74223A61F07C39A60071DD0207E2D(L_10, NULL);
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_11 = L_10;
+		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_8 = __this->___m_Toggle_67;
+		NullCheck(L_8);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_9;
+		L_9 = BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286(L_8, BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_RuntimeMethod_var);
+		String_t* L_10 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___inputUssClassName_73;
+		NullCheck(L_9);
+		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_9, L_10, NULL);
+		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_11 = __this->___m_Toggle_67;
 		NullCheck(L_11);
-		VisualElement_set_name_m5ABC7B8D2586B1839DD436E1AAF25D81395759BC(L_11, _stringLiteral3FC72EB96BC4752D2217AE6BEE20806E886F8AFB, NULL);
-		__this->___m_Container_68 = L_11;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container_68), (void*)L_11);
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_12 = __this->___m_Container_68;
-		String_t* L_13 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___contentUssClassName_72;
-		NullCheck(L_12);
-		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_12, L_13, NULL);
-		Hierarchy_t4CF226F0EDE9C117C51C505730FC80641B1F1677 L_14;
-		L_14 = VisualElement_get_hierarchy_m2E897DE4CFD349E65CFA38EFF6BAAFECE2F4E3E4_inline(__this, NULL);
-		V_0 = L_14;
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_15 = __this->___m_Container_68;
-		Hierarchy_Add_mDDEF4932C9E9FC302755C45A9F7966AEEBC26648((&V_0), L_15, NULL);
-		EventCallback_1_t1FFCCC98AE7C52F427D11F1609ED56BE1E4AEF88* L_16 = (EventCallback_1_t1FFCCC98AE7C52F427D11F1609ED56BE1E4AEF88*)il2cpp_codegen_object_new(EventCallback_1_t1FFCCC98AE7C52F427D11F1609ED56BE1E4AEF88_il2cpp_TypeInfo_var);
-		NullCheck(L_16);
-		EventCallback_1__ctor_m929B5D5292DB931820A52428141FECB39016A6B7(L_16, __this, (intptr_t)((void*)Foldout_OnAttachToPanel_mD7533E9F1E302EA24E18162E66402ECB0C5AED54_RuntimeMethod_var), NULL);
-		CallbackEventHandler_RegisterCallback_TisAttachToPanelEvent_t95C0BC3DD37F324A7816CB2574B56D976C932B28_mE90FCB724E9E49659FDCAE9A1BB0FC9BA01C9BEF(__this, L_16, 0, CallbackEventHandler_RegisterCallback_TisAttachToPanelEvent_t95C0BC3DD37F324A7816CB2574B56D976C932B28_mE90FCB724E9E49659FDCAE9A1BB0FC9BA01C9BEF_RuntimeMethod_var);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_12;
+		L_12 = BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286(L_11, BaseField_1_get_visualInput_m6A3524290300B23D39D5D57B06FEDFC8A8103286_RuntimeMethod_var);
+		il2cpp_codegen_runtime_class_init_inline(Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_il2cpp_TypeInfo_var);
+		String_t* L_13 = ((Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_StaticFields*)il2cpp_codegen_static_fields_for(Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_il2cpp_TypeInfo_var))->___checkmarkUssClassName_98;
+		il2cpp_codegen_runtime_class_init_inline(UQueryExtensions_t1271382882DF1B8FEEDE5EFA510405ABA7BD3426_il2cpp_TypeInfo_var);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_14;
+		L_14 = UQueryExtensions_Q_m625363964EA8275D50A9767F1E3468901C1B0BEC(L_12, (String_t*)NULL, L_13, NULL);
+		String_t* L_15 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___checkmarkUssClassName_74;
+		NullCheck(L_14);
+		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_14, L_15, NULL);
+		Hierarchy_t4CF226F0EDE9C117C51C505730FC80641B1F1677 L_16;
+		L_16 = VisualElement_get_hierarchy_m2E897DE4CFD349E65CFA38EFF6BAAFECE2F4E3E4_inline(__this, NULL);
+		V_0 = L_16;
+		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_17 = __this->___m_Toggle_67;
+		Hierarchy_Add_mDDEF4932C9E9FC302755C45A9F7966AEEBC26648((&V_0), L_17, NULL);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_18 = (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)il2cpp_codegen_object_new(VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115_il2cpp_TypeInfo_var);
+		NullCheck(L_18);
+		VisualElement__ctor_m4C59A7BA0CE74223A61F07C39A60071DD0207E2D(L_18, NULL);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_19 = L_18;
+		NullCheck(L_19);
+		VisualElement_set_name_m5ABC7B8D2586B1839DD436E1AAF25D81395759BC(L_19, _stringLiteral3FC72EB96BC4752D2217AE6BEE20806E886F8AFB, NULL);
+		__this->___m_Container_68 = L_19;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Container_68), (void*)L_19);
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_20 = __this->___m_Container_68;
+		String_t* L_21 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___contentUssClassName_72;
+		NullCheck(L_20);
+		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_20, L_21, NULL);
+		Hierarchy_t4CF226F0EDE9C117C51C505730FC80641B1F1677 L_22;
+		L_22 = VisualElement_get_hierarchy_m2E897DE4CFD349E65CFA38EFF6BAAFECE2F4E3E4_inline(__this, NULL);
+		V_0 = L_22;
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_23 = __this->___m_Container_68;
+		Hierarchy_Add_mDDEF4932C9E9FC302755C45A9F7966AEEBC26648((&V_0), L_23, NULL);
+		EventCallback_1_t1FFCCC98AE7C52F427D11F1609ED56BE1E4AEF88* L_24 = (EventCallback_1_t1FFCCC98AE7C52F427D11F1609ED56BE1E4AEF88*)il2cpp_codegen_object_new(EventCallback_1_t1FFCCC98AE7C52F427D11F1609ED56BE1E4AEF88_il2cpp_TypeInfo_var);
+		NullCheck(L_24);
+		EventCallback_1__ctor_m929B5D5292DB931820A52428141FECB39016A6B7(L_24, __this, (intptr_t)((void*)Foldout_OnAttachToPanel_mD7533E9F1E302EA24E18162E66402ECB0C5AED54_RuntimeMethod_var), NULL);
+		CallbackEventHandler_RegisterCallback_TisAttachToPanelEvent_t95C0BC3DD37F324A7816CB2574B56D976C932B28_mE90FCB724E9E49659FDCAE9A1BB0FC9BA01C9BEF(__this, L_24, 0, CallbackEventHandler_RegisterCallback_TisAttachToPanelEvent_t95C0BC3DD37F324A7816CB2574B56D976C932B28_mE90FCB724E9E49659FDCAE9A1BB0FC9BA01C9BEF_RuntimeMethod_var);
 		return;
 	}
 }
@@ -11586,7 +11645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout_OnAttachToPanel_mD7533E9F1E302EA
 IL_0005:
 	{
 		il2cpp_codegen_runtime_class_init_inline(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
-		String_t* L_0 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_73;
+		String_t* L_0 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_76;
 		String_t* L_1;
 		L_1 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_1), NULL);
 		String_t* L_2;
@@ -11600,7 +11659,7 @@ IL_0023:
 	{
 		int32_t L_4 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
-		int32_t L_5 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_74;
+		int32_t L_5 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_77;
 		V_2 = (bool)((((int32_t)((((int32_t)L_4) > ((int32_t)L_5))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_6 = V_2;
 		if (L_6)
@@ -11610,7 +11669,7 @@ IL_0023:
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
-		String_t* L_7 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_73;
+		String_t* L_7 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_76;
 		String_t* L_8;
 		L_8 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_7, _stringLiteral499284EE1D3CD7FE549A05AE5F4E78D079B96018, NULL);
 		VisualElement_RemoveFromClassList_mA7A2EC202004DFCBF38C12B70C6218BF40D21220(__this, L_8, NULL);
@@ -11619,7 +11678,7 @@ IL_0023:
 		L_9 = VisualElementUtils_GetFoldoutDepth_mB98D346A5BF9FD5DCDB5E1159A32529B278C8C8F(__this, NULL);
 		V_0 = L_9;
 		int32_t L_10 = V_0;
-		int32_t L_11 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_74;
+		int32_t L_11 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_77;
 		V_3 = (bool)((((int32_t)L_10) > ((int32_t)L_11))? 1 : 0);
 		bool L_12 = V_3;
 		if (!L_12)
@@ -11629,7 +11688,7 @@ IL_0023:
 	}
 	{
 		il2cpp_codegen_runtime_class_init_inline(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
-		String_t* L_13 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_73;
+		String_t* L_13 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_76;
 		String_t* L_14;
 		L_14 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_13, _stringLiteral499284EE1D3CD7FE549A05AE5F4E78D079B96018, NULL);
 		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(__this, L_14, NULL);
@@ -11639,7 +11698,7 @@ IL_0023:
 IL_0075:
 	{
 		il2cpp_codegen_runtime_class_init_inline(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
-		String_t* L_15 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_73;
+		String_t* L_15 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_76;
 		String_t* L_16;
 		L_16 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
 		String_t* L_17;
@@ -11660,9 +11719,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout__cctor_mFAD53A53AF1AC8811CE71F13
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42A4AE30C0BBF599A8EA85A9DB39E3F2EE8F852C);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8149A8DD15A75606C6D5787C8BF3C62AC934806D);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA86E3FB289E0A43F5FFD8AEED5C83FA1590C2492);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAB35DAB0EEA719EB963FAA3A5003EC5D7C577879);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBBB856995ACF88C1CA650D18053B819E4C856D43);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEEDA7FC799F82853E584A02F277C933DC6DAE64F);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFA260FC853CB4AA8AF3AC7F64023DE48E0B01E64);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
@@ -11680,15 +11742,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout__cctor_mFAD53A53AF1AC8811CE71F13
 		Il2CppCodeGenWriteBarrier((void**)(&((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___contentUssClassName_72), (void*)L_3);
 		String_t* L_4 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussClassName_70;
 		String_t* L_5;
-		L_5 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_4, _stringLiteral42A4AE30C0BBF599A8EA85A9DB39E3F2EE8F852C, NULL);
-		((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_73 = L_5;
-		Il2CppCodeGenWriteBarrier((void**)(&((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_73), (void*)L_5);
-		((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_74 = 4;
+		L_5 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_4, _stringLiteralFA260FC853CB4AA8AF3AC7F64023DE48E0B01E64, NULL);
+		((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___inputUssClassName_73 = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___inputUssClassName_73), (void*)L_5);
+		String_t* L_6 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussClassName_70;
+		String_t* L_7;
+		L_7 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_6, _stringLiteral8149A8DD15A75606C6D5787C8BF3C62AC934806D, NULL);
+		((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___checkmarkUssClassName_74 = L_7;
+		Il2CppCodeGenWriteBarrier((void**)(&((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___checkmarkUssClassName_74), (void*)L_7);
+		String_t* L_8 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussClassName_70;
+		String_t* L_9;
+		L_9 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_8, _stringLiteralA86E3FB289E0A43F5FFD8AEED5C83FA1590C2492, NULL);
+		((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___textUssClassName_75 = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___textUssClassName_75), (void*)L_9);
+		String_t* L_10 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussClassName_70;
+		String_t* L_11;
+		L_11 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_10, _stringLiteral42A4AE30C0BBF599A8EA85A9DB39E3F2EE8F852C, NULL);
+		((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_76 = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutDepthClassName_76), (void*)L_11);
+		((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_77 = 4;
 		return;
 	}
 }
-// System.Void UnityEngine.UIElements.Foldout::<.ctor>b__20_0(UnityEngine.UIElements.ChangeEvent`1<System.Boolean>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout_U3C_ctorU3Eb__20_0_mDA9D66196E6DC49E484CD731D93B7A086CCABA6B (Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3* __this, ChangeEvent_1_t2AA4161DCA648D276CFE726DD08B0D55FA799D4B* ___evt0, const RuntimeMethod* method) 
+// System.Void UnityEngine.UIElements.Foldout::<.ctor>b__23_0(UnityEngine.UIElements.ChangeEvent`1<System.Boolean>)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Foldout_U3C_ctorU3Eb__23_0_mE48ABEF92CB010096326302889F341CE541A3EF3 (Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3* __this, ChangeEvent_1_t2AA4161DCA648D276CFE726DD08B0D55FA799D4B* ___evt0, const RuntimeMethod* method) 
 {
 	{
 		Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C* L_0 = __this->___m_Toggle_67;

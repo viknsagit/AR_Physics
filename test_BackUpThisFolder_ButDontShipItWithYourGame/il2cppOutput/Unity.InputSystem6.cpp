@@ -5981,6 +5981,10 @@ struct PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB  : public Base
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CradiusU3Ek__BackingField_29;
 	// UnityEngine.Vector2 UnityEngine.EventSystems.PointerEventData::<radiusVariance>k__BackingField
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CradiusVarianceU3Ek__BackingField_30;
+	// System.Boolean UnityEngine.EventSystems.PointerEventData::<fullyExited>k__BackingField
+	bool ___U3CfullyExitedU3Ek__BackingField_31;
+	// System.Boolean UnityEngine.EventSystems.PointerEventData::<reentered>k__BackingField
+	bool ___U3CreenteredU3Ek__BackingField_32;
 };
 
 // UnityEngine.ScriptableObject
@@ -6442,19 +6446,19 @@ struct Behaviour_t01970CFBBA658497AE30F311C447DB0440BAB7FA  : public Component_t
 struct ExtendedPointerEventData_t164B462A9B123B2EE69B7DEC4F33F6AA3DE7937F  : public PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB
 {
 	// UnityEngine.InputSystem.InputControl UnityEngine.InputSystem.UI.ExtendedPointerEventData::<control>k__BackingField
-	InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* ___U3CcontrolU3Ek__BackingField_31;
+	InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* ___U3CcontrolU3Ek__BackingField_33;
 	// UnityEngine.InputSystem.InputDevice UnityEngine.InputSystem.UI.ExtendedPointerEventData::<device>k__BackingField
-	InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* ___U3CdeviceU3Ek__BackingField_32;
+	InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* ___U3CdeviceU3Ek__BackingField_34;
 	// System.Int32 UnityEngine.InputSystem.UI.ExtendedPointerEventData::<touchId>k__BackingField
-	int32_t ___U3CtouchIdU3Ek__BackingField_33;
+	int32_t ___U3CtouchIdU3Ek__BackingField_35;
 	// UnityEngine.InputSystem.UI.UIPointerType UnityEngine.InputSystem.UI.ExtendedPointerEventData::<pointerType>k__BackingField
-	int32_t ___U3CpointerTypeU3Ek__BackingField_34;
+	int32_t ___U3CpointerTypeU3Ek__BackingField_36;
 	// System.Int32 UnityEngine.InputSystem.UI.ExtendedPointerEventData::<uiToolkitPointerId>k__BackingField
-	int32_t ___U3CuiToolkitPointerIdU3Ek__BackingField_35;
+	int32_t ___U3CuiToolkitPointerIdU3Ek__BackingField_37;
 	// UnityEngine.Vector3 UnityEngine.InputSystem.UI.ExtendedPointerEventData::<trackedDevicePosition>k__BackingField
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CtrackedDevicePositionU3Ek__BackingField_36;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___U3CtrackedDevicePositionU3Ek__BackingField_38;
 	// UnityEngine.Quaternion UnityEngine.InputSystem.UI.ExtendedPointerEventData::<trackedDeviceOrientation>k__BackingField
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___U3CtrackedDeviceOrientationU3Ek__BackingField_37;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___U3CtrackedDeviceOrientationU3Ek__BackingField_39;
 };
 
 // UnityEngine.InputSystem.InputActionAsset
@@ -11884,7 +11888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputControl_t74F06B623518F992BF8E38656A5E085
 {
 	{
 		// public InputControl control { get; set; }
-		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_0 = __this->___U3CcontrolU3Ek__BackingField_31;
+		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_0 = __this->___U3CcontrolU3Ek__BackingField_33;
 		return L_0;
 	}
 }
@@ -11894,8 +11898,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set_control_m17
 	{
 		// public InputControl control { get; set; }
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_0 = ___value0;
-		__this->___U3CcontrolU3Ek__BackingField_31 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcontrolU3Ek__BackingField_31), (void*)L_0);
+		__this->___U3CcontrolU3Ek__BackingField_33 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcontrolU3Ek__BackingField_33), (void*)L_0);
 		return;
 	}
 }
@@ -11904,7 +11908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR InputDevice_t8BCF67533E872A75779C24C93D1D7085
 {
 	{
 		// public InputDevice device { get; set; }
-		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_0 = __this->___U3CdeviceU3Ek__BackingField_32;
+		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_0 = __this->___U3CdeviceU3Ek__BackingField_34;
 		return L_0;
 	}
 }
@@ -11914,8 +11918,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set_device_m8BD
 	{
 		// public InputDevice device { get; set; }
 		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_0 = ___value0;
-		__this->___U3CdeviceU3Ek__BackingField_32 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CdeviceU3Ek__BackingField_32), (void*)L_0);
+		__this->___U3CdeviceU3Ek__BackingField_34 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CdeviceU3Ek__BackingField_34), (void*)L_0);
 		return;
 	}
 }
@@ -11924,7 +11928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ExtendedPointerEventData_get_touchId_
 {
 	{
 		// public int touchId { get; set; }
-		int32_t L_0 = __this->___U3CtouchIdU3Ek__BackingField_33;
+		int32_t L_0 = __this->___U3CtouchIdU3Ek__BackingField_35;
 		return L_0;
 	}
 }
@@ -11934,7 +11938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set_touchId_m69
 	{
 		// public int touchId { get; set; }
 		int32_t L_0 = ___value0;
-		__this->___U3CtouchIdU3Ek__BackingField_33 = L_0;
+		__this->___U3CtouchIdU3Ek__BackingField_35 = L_0;
 		return;
 	}
 }
@@ -11943,7 +11947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ExtendedPointerEventData_get_pointerT
 {
 	{
 		// public UIPointerType pointerType { get; set; }
-		int32_t L_0 = __this->___U3CpointerTypeU3Ek__BackingField_34;
+		int32_t L_0 = __this->___U3CpointerTypeU3Ek__BackingField_36;
 		return L_0;
 	}
 }
@@ -11953,7 +11957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set_pointerType
 	{
 		// public UIPointerType pointerType { get; set; }
 		int32_t L_0 = ___value0;
-		__this->___U3CpointerTypeU3Ek__BackingField_34 = L_0;
+		__this->___U3CpointerTypeU3Ek__BackingField_36 = L_0;
 		return;
 	}
 }
@@ -11962,7 +11966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ExtendedPointerEventData_get_uiToolki
 {
 	{
 		// public int uiToolkitPointerId { get; set; }
-		int32_t L_0 = __this->___U3CuiToolkitPointerIdU3Ek__BackingField_35;
+		int32_t L_0 = __this->___U3CuiToolkitPointerIdU3Ek__BackingField_37;
 		return L_0;
 	}
 }
@@ -11972,7 +11976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set_uiToolkitPo
 	{
 		// public int uiToolkitPointerId { get; set; }
 		int32_t L_0 = ___value0;
-		__this->___U3CuiToolkitPointerIdU3Ek__BackingField_35 = L_0;
+		__this->___U3CuiToolkitPointerIdU3Ek__BackingField_37 = L_0;
 		return;
 	}
 }
@@ -11981,7 +11985,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 {
 	{
 		// public Vector3 trackedDevicePosition { get; set; }
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___U3CtrackedDevicePositionU3Ek__BackingField_36;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___U3CtrackedDevicePositionU3Ek__BackingField_38;
 		return L_0;
 	}
 }
@@ -11991,7 +11995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set_trackedDevi
 	{
 		// public Vector3 trackedDevicePosition { get; set; }
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___value0;
-		__this->___U3CtrackedDevicePositionU3Ek__BackingField_36 = L_0;
+		__this->___U3CtrackedDevicePositionU3Ek__BackingField_38 = L_0;
 		return;
 	}
 }
@@ -12000,7 +12004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 {
 	{
 		// public Quaternion trackedDeviceOrientation { get; set; }
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = __this->___U3CtrackedDeviceOrientationU3Ek__BackingField_37;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = __this->___U3CtrackedDeviceOrientationU3Ek__BackingField_39;
 		return L_0;
 	}
 }
@@ -12010,7 +12014,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set_trackedDevi
 	{
 		// public Quaternion trackedDeviceOrientation { get; set; }
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = ___value0;
-		__this->___U3CtrackedDeviceOrientationU3Ek__BackingField_37 = L_0;
+		__this->___U3CtrackedDeviceOrientationU3Ek__BackingField_39 = L_0;
 		return;
 	}
 }
@@ -34823,7 +34827,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InputDevice_t8BCF67533E872A75779C
 {
 	{
 		// public InputDevice device { get; set; }
-		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_0 = __this->___U3CdeviceU3Ek__BackingField_32;
+		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_0 = __this->___U3CdeviceU3Ek__BackingField_34;
 		return L_0;
 	}
 }
@@ -34831,7 +34835,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ExtendedPointerEventData_
 {
 	{
 		// public UIPointerType pointerType { get; set; }
-		int32_t L_0 = __this->___U3CpointerTypeU3Ek__BackingField_34;
+		int32_t L_0 = __this->___U3CpointerTypeU3Ek__BackingField_36;
 		return L_0;
 	}
 }
@@ -34839,7 +34843,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ExtendedPointerEventData_
 {
 	{
 		// public int touchId { get; set; }
-		int32_t L_0 = __this->___U3CtouchIdU3Ek__BackingField_33;
+		int32_t L_0 = __this->___U3CtouchIdU3Ek__BackingField_35;
 		return L_0;
 	}
 }
@@ -34855,7 +34859,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 {
 	{
 		// public Vector3 trackedDevicePosition { get; set; }
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___U3CtrackedDevicePositionU3Ek__BackingField_36;
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___U3CtrackedDevicePositionU3Ek__BackingField_38;
 		return L_0;
 	}
 }
@@ -34863,7 +34867,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 {
 	{
 		// public Quaternion trackedDeviceOrientation { get; set; }
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = __this->___U3CtrackedDeviceOrientationU3Ek__BackingField_37;
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = __this->___U3CtrackedDeviceOrientationU3Ek__BackingField_39;
 		return L_0;
 	}
 }
@@ -34871,7 +34875,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InputControl_t74F06B623518F992BF8
 {
 	{
 		// public InputControl control { get; set; }
-		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_0 = __this->___U3CcontrolU3Ek__BackingField_31;
+		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_0 = __this->___U3CcontrolU3Ek__BackingField_33;
 		return L_0;
 	}
 }
@@ -34888,7 +34892,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set
 	{
 		// public int uiToolkitPointerId { get; set; }
 		int32_t L_0 = ___value0;
-		__this->___U3CuiToolkitPointerIdU3Ek__BackingField_35 = L_0;
+		__this->___U3CuiToolkitPointerIdU3Ek__BackingField_37 = L_0;
 		return;
 	}
 }
@@ -35266,7 +35270,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set
 	{
 		// public Quaternion trackedDeviceOrientation { get; set; }
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_0 = ___value0;
-		__this->___U3CtrackedDeviceOrientationU3Ek__BackingField_37 = L_0;
+		__this->___U3CtrackedDeviceOrientationU3Ek__BackingField_39 = L_0;
 		return;
 	}
 }
@@ -35275,7 +35279,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set
 	{
 		// public Vector3 trackedDevicePosition { get; set; }
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___value0;
-		__this->___U3CtrackedDevicePositionU3Ek__BackingField_36 = L_0;
+		__this->___U3CtrackedDevicePositionU3Ek__BackingField_38 = L_0;
 		return;
 	}
 }
@@ -36024,8 +36028,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set
 	{
 		// public InputControl control { get; set; }
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_0 = ___value0;
-		__this->___U3CcontrolU3Ek__BackingField_31 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcontrolU3Ek__BackingField_31), (void*)L_0);
+		__this->___U3CcontrolU3Ek__BackingField_33 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CcontrolU3Ek__BackingField_33), (void*)L_0);
 		return;
 	}
 }
@@ -36034,8 +36038,8 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set
 	{
 		// public InputDevice device { get; set; }
 		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_0 = ___value0;
-		__this->___U3CdeviceU3Ek__BackingField_32 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CdeviceU3Ek__BackingField_32), (void*)L_0);
+		__this->___U3CdeviceU3Ek__BackingField_34 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CdeviceU3Ek__BackingField_34), (void*)L_0);
 		return;
 	}
 }
@@ -36044,7 +36048,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set
 	{
 		// public UIPointerType pointerType { get; set; }
 		int32_t L_0 = ___value0;
-		__this->___U3CpointerTypeU3Ek__BackingField_34 = L_0;
+		__this->___U3CpointerTypeU3Ek__BackingField_36 = L_0;
 		return;
 	}
 }
@@ -36062,7 +36066,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ExtendedPointerEventData_set
 	{
 		// public int touchId { get; set; }
 		int32_t L_0 = ___value0;
-		__this->___U3CtouchIdU3Ek__BackingField_33 = L_0;
+		__this->___U3CtouchIdU3Ek__BackingField_35 = L_0;
 		return;
 	}
 }
@@ -36110,7 +36114,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ExtendedPointerEventData_
 {
 	{
 		// public int uiToolkitPointerId { get; set; }
-		int32_t L_0 = __this->___U3CuiToolkitPointerIdU3Ek__BackingField_35;
+		int32_t L_0 = __this->___U3CuiToolkitPointerIdU3Ek__BackingField_37;
 		return L_0;
 	}
 }

@@ -6707,10 +6707,16 @@ struct Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields
 	String_t* ___toggleUssClassName_71;
 	// System.String UnityEngine.UIElements.Foldout::contentUssClassName
 	String_t* ___contentUssClassName_72;
+	// System.String UnityEngine.UIElements.Foldout::inputUssClassName
+	String_t* ___inputUssClassName_73;
+	// System.String UnityEngine.UIElements.Foldout::checkmarkUssClassName
+	String_t* ___checkmarkUssClassName_74;
+	// System.String UnityEngine.UIElements.Foldout::textUssClassName
+	String_t* ___textUssClassName_75;
 	// System.String UnityEngine.UIElements.Foldout::ussFoldoutDepthClassName
-	String_t* ___ussFoldoutDepthClassName_73;
+	String_t* ___ussFoldoutDepthClassName_76;
 	// System.Int32 UnityEngine.UIElements.Foldout::ussFoldoutMaxDepth
-	int32_t ___ussFoldoutMaxDepth_74;
+	int32_t ___ussFoldoutMaxDepth_77;
 };
 
 // UnityEngine.UIElements.KeyDownEvent
@@ -22416,7 +22422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IMGUIContainer__cctor_m4B97BF84C673C7523
 		Event_set_type_m16D35A8AF665F4A73A447F9EE7CA36963F34FEC2(L_10, 8, NULL);
 		((IMGUIContainer_t2BB1312DCDFA8AC98E9ADA9EA696F2328A598A26_StaticFields*)il2cpp_codegen_static_fields_for(IMGUIContainer_t2BB1312DCDFA8AC98E9ADA9EA696F2328A598A26_il2cpp_TypeInfo_var))->___s_CurrentEvent_90 = L_10;
 		Il2CppCodeGenWriteBarrier((void**)(&((IMGUIContainer_t2BB1312DCDFA8AC98E9ADA9EA696F2328A598A26_StaticFields*)il2cpp_codegen_static_fields_for(IMGUIContainer_t2BB1312DCDFA8AC98E9ADA9EA696F2328A598A26_il2cpp_TypeInfo_var))->___s_CurrentEvent_90), (void*)L_10);
-		int32_t L_11 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_74;
+		int32_t L_11 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_77;
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_12 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		NullCheck(L_12);
 		List_1__ctor_m1A062F45FE926079CE2D4FD38A3BF15F7AEB89AF(L_12, ((int32_t)il2cpp_codegen_add(L_11, 1)), List_1__ctor_m1A062F45FE926079CE2D4FD38A3BF15F7AEB89AF_RuntimeMethod_var);
@@ -22444,7 +22450,7 @@ IL_00b4:
 	{
 		int32_t L_18 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var);
-		int32_t L_19 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_74;
+		int32_t L_19 = ((Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_StaticFields*)il2cpp_codegen_static_fields_for(Foldout_t150CF00C27D0C105EC2831E0BA1C5D8A96EF5DC3_il2cpp_TypeInfo_var))->___ussFoldoutMaxDepth_77;
 		V_1 = (bool)((((int32_t)((((int32_t)L_18) > ((int32_t)L_19))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 		bool L_20 = V_1;
 		if (L_20)

@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     private GameObject leftObject;
     private float mTemp = 0;
     private float omTemp = 0;
+    private void Start()
+    {
+        Calculate();
+    }
     public void Calculate()
     {
         
@@ -35,50 +39,50 @@ public class GameManager : MonoBehaviour
             {
                 case 2:
                     {
-                        leftObject.transform.position = new Vector3(leftObject.transform.position.x, 0.978f, leftObject.transform.position.z);
-                        rightObject.transform.position = new Vector3(rightObject.transform.position.x, 1f, rightObject.transform.position.z);
+                        GameObjectMoveY(leftObject, 0.978f);
+                        GameObjectMoveY(rightObject, 1f);
                         omTemp = OM.result;
                     }
                     break;
                 case 3:
                     {
-                        leftObject.transform.position = new Vector3(leftObject.transform.position.x, 0.98f, leftObject.transform.position.z);
-                        rightObject.transform.position = new Vector3(rightObject.transform.position.x, 1.002f, rightObject.transform.position.z);
+                        GameObjectMoveY(leftObject, 0.98f);
+                        GameObjectMoveY(rightObject, 1.002f);
                         omTemp = OM.result;
                     }
                     break;
                 case 4:
                     {
-                        leftObject.transform.position = new Vector3(leftObject.transform.position.x, 0.982f, leftObject.transform.position.z);
-                        rightObject.transform.position = new Vector3(rightObject.transform.position.x, 1.004f, rightObject.transform.position.z);
+                        GameObjectMoveY(leftObject, 0.982f);
+                        GameObjectMoveY(rightObject, 1.004f);
                         omTemp = OM.result;
                     }
                     break;
                 case 5:
                     {
-                        leftObject.transform.position = new Vector3(leftObject.transform.position.x, 0.984f, leftObject.transform.position.z);
-                        rightObject.transform.position = new Vector3(rightObject.transform.position.x, 1.006f, rightObject.transform.position.z);
+                        GameObjectMoveY(leftObject, 0.984f);
+                        GameObjectMoveY(rightObject, 1.006f);
                         omTemp = OM.result;
                     }
                     break;
                 case 6:
                     {
-                        leftObject.transform.position = new Vector3(leftObject.transform.position.x, 0.986f, leftObject.transform.position.z);
-                        rightObject.transform.position = new Vector3(rightObject.transform.position.x, 1.008f, rightObject.transform.position.z);
+                        GameObjectMoveY(leftObject, 0.986f);
+                        GameObjectMoveY(rightObject, 1.008f);
                         omTemp = OM.result;
                     }
                     break;
                 case 7:
                     {
-                        leftObject.transform.position = new Vector3(leftObject.transform.position.x, 0.988f, leftObject.transform.position.z);
-                        rightObject.transform.position = new Vector3(rightObject.transform.position.x, 1.01f, rightObject.transform.position.z);
+                        GameObjectMoveY(leftObject, 0.988f);
+                        GameObjectMoveY(rightObject, 1.008f);
                         omTemp = OM.result;
                     }
                     break;
                 case 8:
                     {
-                        leftObject.transform.position = new Vector3(leftObject.transform.position.x, 0.99f, leftObject.transform.position.z);
-                        rightObject.transform.position = new Vector3(rightObject.transform.position.x, 1.012f, rightObject.transform.position.z);
+                        GameObjectMoveY(leftObject, 0.99f);
+                        GameObjectMoveY(rightObject, 1.008f);
                         omTemp = OM.result;
                     }
                     break;
@@ -92,15 +96,20 @@ public class GameManager : MonoBehaviour
         if(m.result > mTemp)
         {
             mTemp = m.result;
-            rightObject.transform.position = new Vector3(rightObject.transform.position.x, rightObject.transform.position.y + 0.001f, rightObject.transform.position.z);
-            leftObject.transform.position = new Vector3(leftObject.transform.position.x, leftObject.transform.position.y - 0.001f, leftObject.transform.position.z);
+            GameObjectMoveY(leftObject, leftObject.transform.position.y - 0.001f);
+            GameObjectMoveY(rightObject, rightObject.transform.position.y + 0.001f);
 
         }
         else if (m.result < mTemp)
         {
             mTemp = m.result;
-            rightObject.transform.position = new Vector3(rightObject.transform.position.x, rightObject.transform.position.y - 0.001f, rightObject.transform.position.z);
-            leftObject.transform.position = new Vector3(leftObject.transform.position.x, leftObject.transform.position.y + 0.001f, leftObject.transform.position.z);
+            GameObjectMoveY(leftObject, leftObject.transform.position.y + 0.001f);
+            GameObjectMoveY(rightObject, rightObject.transform.position.y - 0.001f);
         }
+    }
+
+    private void GameObjectMoveY(GameObject objectForMove, float yPos)
+    {
+        objectForMove.transform.position = new Vector3(leftObject.transform.position.x, yPos, leftObject.transform.position.z);
     }
 }
